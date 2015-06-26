@@ -17,20 +17,22 @@ private:
 public:
 	Objects(int);
 	~Objects(void);
-	void addFace(int);
-	int getId(void);
-	std::vector<int> getFaces(void);
-	void setCenter(float, float, float);
-	std::vector<float> getCenter(void);
-	void updateAngles(float, float);
-	float getAngleX(void);
-	float getAngleY(void);
-	void updateDepth(float);
-	float getDepth(void);
-	void updateTranslation(float, float);
-	float getTranslationX(void);
-	float getTranslationY(void);
+	int getId(void){return _id;};
+	vector<int> getFaces(void){ return _faces;};
+	float getTranslationX(void){return _translateX;};
+	float getTranslationY(void){return _translateY;};
 	void selected(bool s){ _isSelected = s;};
 	bool isSelected(){ return _isSelected;};
+	vector<float> getCenter(void){return _center;};
+	float getAngleX(void){return _angleX;};
+	float getAngleY(void){return _angleY;};
+	float getDepth(void){return _depth;};
+
+	void addFace(int);
+	void setCenter(float, float, float);
+	void updateAngles(float, float);
+	void updateDepth(float);
+	void updateTranslation(float, float);
+
 };
 

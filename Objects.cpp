@@ -15,32 +15,16 @@ Objects::Objects(int id)
 Objects::~Objects(void)
 {}
 
-int Objects::getId(void)
-{
-	return _id;
-}
-
 void Objects::addFace(int eIndex)
 {
 	_faces.push_back(eIndex);
 }
-
-vector<int> Objects::getFaces(void)
-{
-	return _faces;
-}
-
 void Objects::setCenter(float x, float y, float z)
 {
 	_center.clear();
 	_center.push_back(x);
 	_center.push_back(y);
 	_center.push_back(z);
-}
-
-vector<float> Objects::getCenter(void)
-{
-	return _center;
 }
 
 void Objects::updateAngles(float x, float y)
@@ -53,38 +37,13 @@ void Objects::updateAngles(float x, float y)
 		_angleY = 0;
 }
 
-float Objects::getAngleX(void)
-{
-	return _angleX;
-}
-
-float Objects::getAngleY(void)
-{
-	return _angleY;
-}
-
 void Objects::updateDepth(float depth)
 {
 	_depth += depth;
-}
-
-float Objects::getDepth(void)
-{
-	return _depth;
 }
 
 void Objects::updateTranslation(float x, float y)
 {
 	_translateX += x;
 	_translateY += y;
-}
-
-float Objects::getTranslationX(void)
-{
-	return _translateX;
-}
-
-float Objects::getTranslationY(void)
-{
-	return _translateY;
 }
